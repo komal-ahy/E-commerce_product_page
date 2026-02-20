@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>E-commerce product page</title>
+  </head>
+
+  <body>
+    <div class="w-full px-4 md:px-28 min-h-screen overflow-hidden">
+      <div class="w-full p-6 flex border-b border-gray-200 justify-between">
+        <div class="flex items-center gap-4 md:gap-12">
+          <img
+            id="menu-btn"
+            src="/images/icon-menu.svg"
+            class="w-6 h-6 cursor-pointer md:hidden"
+          />
+
+          <a href="index.html">
+            <img
+              id="logo"
+              src="/images/logo.svg"
+              alt="logo"
+              class="cursor-pointer"
+            />
+          </a>
+
+          <div
+            id="nav-links"
+            class="hidden md:flex text-gray-500 font-light gap-10"
+          >
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+
+        <div class="relative flex items-center gap-6">
+          <div class="relative">
+            <img
+              id="cart-icon"
+              class="w-6 h-6 cursor-pointer"
+              src="/images/icon-cart.svg"
+            />
+
+            <span
+              id="cart-count"
+              class="hidden absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 rounded-full"
+            >
+              0
+            </span>
+          </div>
+
+          <div
+            id="cart-box"
+            class="hidden absolute right-0 top-12 w-64 bg-white shadow-lg rounded p-4 z-50"
+          >
+            <div class="flex justify-between">
+              <h3 class="font-bold border-b pb-2">Cart</h3>
+
+              <img
+                id="close-box"
+                src="/images/icon-close.svg"
+                class="w-4 h-4 cursor-pointer"
+              />
+            </div>
+
+            <div id="cart-content" class="mt-3 text-sm text-gray-500">
+              Your cart is empty.
+            </div>
+          </div>
+
+          <img
+            src="/images/image-avatar.png"
+            class="w-10 h-10 cursor-pointer"
+          />
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 md:hidden"
+      >
+        <div class="bg-white w-64 h-full p-6">
+          <img
+            id="close-menu"
+            src="/images/icon-close.svg"
+            class="w-4 mb-8 cursor-pointer"
+          />
+
+          <nav class="flex flex-col gap-6 font-bold text-black">
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="w-full px-4 md:px-20 flex flex-col md:flex-row mt-10 gap-16">
+        <div class="md:w-1/2">
+          <img 
+            id="mainImage"
+            class="w-full rounded-xl cursor-pointer"
+            src="/images/image-product-1.jpg"
+          />
+
+          <div class="flex gap-8 mt-6 justify-center">
+            <img
+              class="thumb w-20 rounded"
+              src="/images/image-product-1-thumbnail.jpg"
+            />
+            <img
+              class="thumb w-20 rounded"
+              src="/images/image-product-2-thumbnail.jpg"
+            />
+            <img
+              class="thumb w-20 rounded"
+              src="/images/image-product-3-thumbnail.jpg"
+            />
+            <img
+              class="thumb w-20 rounded"
+              src="/images/image-product-4-thumbnail.jpg"
+            />
+          </div>
+        </div>
+
+        <div class="md:w-1/2">
+          <p class="text-gray-500">SNEAKER COMPANY</p>
+
+          <h1 class="py-6 font-bold text-4xl md:text-6xl">
+            Fall Limited Edition Sneakers
+          </h1>
+
+          <p class="text-gray-500 flex flex-wrap">
+            These low-profile sneakers are your perfect casual wear companion.
+             Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+
+          <div class="py-6 flex items-center gap-4  ">
+            <p class="text-3xl font-bold">$125.00</p>
+
+            <p class="bg-black text-white px-2 rounded">50%</p><br>
+
+            <p class="text-gray-500 line-through">$250.00</p>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-4 ">
+            <div
+              class="w-full  bg-gray-100 flex items-center justify-between px-4 py-3 rounded md:min-w-20 max-w-50 "
+            >
+              <img class="cursor-pointer" id="minusBtn" src="/images/icon-minus.svg" />
+
+              <span id="quantity" class=" cursor-pointer font-bold text-black">0</span>
+
+              <img class="cursor-pointer" id="plusBtn" src="/images/icon-plus.svg" />
+            </div>
+
+            <div
+              id="addToCartBtn"
+              class="min-w-50 max-w-80 flex-1 bg-orange-500 text-white flex items-center justify-center gap-3 rounded cursor-pointer py-3"
+            >
+              <img src="/images/icon-cart.svg" />
+
+              <p class="font-bold">Add to cart</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+              id="themeToggle"
+              class="w-30 h-8  right-6 bottom-6 bg-[hsl(26,100%,55%)] fixed flex justify-center items-center rounded-md font-semibold transition-all duration-300 border cursor-default hover:cursor-pointer hover:bg-[hsl(26,95%,46%)]"
+            >
+              <button
+                class="theme-btn cursor-default hover:cursor-pointer hover:bg-[hsl(26,100%,30%)]"
+              >
+                Dark Mode
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+<div
+  id="lightbox"
+  class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center flex-col z-50"
+>
+  <div class="relative">
+
+    <button
+      id="closeLightbox"
+      class="absolute -top-10 right-0 text-white text-2xl cursor-pointer"
+    >
+      ✕
+    </button>
+
+    <img
+      id="lightboxImage"
+      class="w-72 md:w-125 rounded-xl"
+    />
+
+  </div>
+
+  <div class="flex gap-4 mt-6">
+
+    <img class="thumb rounded w-20 cursor-pointer" src="/images/image-product-1-thumbnail.jpg" />
+    <img class="thumb rounded w-20 cursor-pointer" src="/images/image-product-2-thumbnail.jpg" />
+    <img class="thumb rounded w-20 cursor-pointer" src="/images/image-product-3-thumbnail.jpg" />
+    <img class="thumb rounded w-20 cursor-pointer" src="/images/image-product-4-thumbnail.jpg" />
+
+  </div>
+</div>
+    <script src="script.js"></script>
+  </body>
+</html>
