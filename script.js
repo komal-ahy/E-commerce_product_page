@@ -23,7 +23,7 @@ const discount=document.querySelector("discount")
 const product = {
   name: "Fall Limited Edition Sneakers",
   price: 125,
-  image: "/Product_Page/images/image-product-1-thumbnail.jpg",
+  image: "/images/image-product-1-thumbnail.jpg",
 };
 
 
@@ -131,7 +131,7 @@ function updateCartUI() {
 
       <img
         id="delete-btn"
-        src="/Product_Page/images/icon-delete.svg"
+        src="/images/icon-delete.svg"
         class="w-4 cursor-pointer"
       />
 
